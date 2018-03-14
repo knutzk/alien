@@ -11,12 +11,12 @@ alien_storage_info(){
 }
 
 alien_date_time_info(){
-  echo -n "`date +%r`";
+  echo -n "`date +%T`";
 }
 
 alien_ssh_client(){
   if [ -n "${SSH_CLIENT}" ]; then
-    echo -n $SSH_CLIENT | awk {'print $1 " "'};
+    echo -n "`hostname -s` ";
   fi
 }
 
